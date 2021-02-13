@@ -1,0 +1,188 @@
+insert into Doctor values 
+('Zarin Tasnim', 'Gynae and Obs', 32, 'z_tasnim', 'd001'),
+('Tahsin Mohammad', 'Cardiology ', 45, 't_mohammad', 'd002'),
+('Moin Ahmed', 'Neurosurgery ', 38, 'm_ahmed', 'd003'),
+('Ali Ismail', 'Paediatrics ', 41, 'a_ismail', 'd004'),
+('Ibrahim Khalil', 'Internal Medicine', 53, 'i_khalil', 'd005');
+
+insert into Doctor_1 values
+('d001','z_tasnim', '37puwxlb'),
+('d002','t_mohammad', 's56wqdru'),
+('d003','m_ahmed', 'l8l7mdq0'),
+('d004','a_ismail', 'gmwf19mj'),
+('d005','i_khalil', 'nle5vkjb');
+
+insert into Patient values
+('Samiul Hossain','1997-12-28','Male','Myocardial Infarction','p001','Prominent Housing','3','Mohammadpur','Dhaka'),
+('Tanvir Ali','1997-12-24','Male','Cardiac Amyloidosis','p002','Sunnyside','4-A','Lalmatia','Dhaka'),
+('Mohit Uddin Ahmed','1996-12-29','Male','Infective endocarditis','p003','The Cottage','4','Green Road','Dhaka'),
+('Sakib Ahmed','1997-04-07','Male','Osteoarthritis','p004','The Old Post','5','Kalabagan','Dhaka'),
+('Nazibur Rahman','1998-02-15','Male','Pneuomonia','p005','Hillside','2','Kalabagan','Dhaka'),
+('Raha Haque','1999-09-23','Female','Ovarian Cysts','p006','Wayside','7','Old Dhaka','Dhaka'),
+('Tasnim Maisha','2006-06-19','Female','Mumps','p007','The Orchard','9','Khilgaon','Dhaka'),
+('Tausif Ahmed','1997-10-17','Male','Hypothyroidism','p008','The Bungalow','2','Dhanmondi','Dhaka'),
+('Talha Yamin','1997-02-14','Male','Influenza','p009','Hillcrest','3','Dhanmondi','Dhaka'),
+('Fahim Ibn Afzal','1997-06-26','Male','Meningitis','p010','Highfield','1','Dhanmondi','Dhaka');
+
+
+insert into Symptoms_1 values 
+('Chest pain, shortness of breath, cold sweat','p001'),
+('Shortness of breath, rapid weight loss, enlarged tongue, irregular heartbeat, numbness in feet','p002'),
+('rapid heart rate, chest pain, lightheadedness, clubbing, shortness of breath','p003'),
+('Joint pain, loss of flexibility, joint tenderness','p004'),
+('Chest pain, cough with phlegm, fatigue, fever, shaking chills','p005'),
+('Abdominal bloating, pelvic pain during menstrual cycle, nausea, vomiting','p006'),
+('Swollen salivary gland, fever, weakness, loss of apetite','p007'),
+('Weight gain, puffy face, fatigue, muscle weakness, dry skin','p008'),
+('High fever, aching muscles, headache, dry cough, nasal congestion','p009'),
+('Sudden high fever, stiff neck, seizure','p010');
+
+insert into Patient_History values
+('Tetanus,Diarrhea','120/80mmHg','69 beats per minute','35.5','80.2','6.00','Cystic Fibrosis','p001'),
+('Diarrhea','120/80mmHg','75 beats per minute','36.6','78.8','5.80','Sickle cell disease','p002'),
+('Yellow Fever','120/80mmHg','72 beats per minute','35.1','72.2','5.60','Cystic Fibrosis','p003'),
+('Typhoid Fever','139/89mmHg','80 beats per minute','36.8','71.1','5.40','Duchenne muscular dystrophy','p004'),
+('Malaria,Brochitis', '135/85mmHg', '85 beats per minute','35.4','68.80','5.75','None','p005'),
+('None','120/80mmHg','99 beats per minute','36.9','68.8','5.4','None','p006'),
+('None','120/80mmHg','68 beats per minute','37.3','67.5','5.2','None','p007'),
+('Yellow Fever','139/89mmHg','60 beats per minute','36.2','88.9','5.67','Marfan syndrome','p008'),
+('Dengue Fever','139/89mmHg','70 beats per minute','36.1','87.8','5.80','None','p009'),
+('Dengue Fever','120/80mmHg','89 beats per minute','36.0','78.2','5.70','None','p010');
+
+
+insert into Consults values
+('p001','d002'),
+('p002','d002'),
+('p003','d002'),
+('p004','d005'),
+('p005','d005'),
+('p006','d001'),
+('p007','d004'),
+('p008','d005'),
+('p009','d005'),
+('p010','d003');
+
+insert into Medicine values
+('Prednisone', 'Cortan 5mg', '5 mg', 'm001', 0),
+('Prednisone', 'Cortan 10mg', '10 mg', 'm002', 0),
+('Prednisone', 'Cortan 20mg', '20 mg', 'm003', 0),
+('Cefixime', 'Cef-3 100mg', '100 mg', 'm004', 0),
+('Cefixime', 'Cef-3 200mg', '200 mg', 'm005', 0),
+('Cefixime', 'Cef-3 400mg', '400 mg', 'm006', 0),
+('Acetaminophen', 'Napa 500mg', '500 mg', 'm007', 0),
+('Ibuprofen', 'Inflam 200mg', '200 mg', 'm008', 0),
+('Ibuprofen', 'Inflam 400mg', '400 mg', 'm009', 0),
+('Metformin', 'Metform 500mg', '500 mg', 'm010', 0),
+('Metformin', 'Metform 850mg', '850 mg', 'm011', 0),
+('Norgestrel+Ethinyl Estradiol+Ferrous Fumarate', 'Femicon', '0.3+0.03+75 mg', 'm012', 0),
+('Bisoprolol', 'Bislol 2.5mg', '2.5 mg', 'm013', 0),
+('Bisoprolol', 'Bislol 5mg', '5 mg', 'm014', 0),
+('Nitroglycerine', 'Nitrovas 2.6mg', '2.6 mg', 'm015', 0),
+('Losartan', 'Angilock 25mg', '25 mg', 'm016', 0),
+('Losartan', 'Angilock 50mg', '50 mg', 'm017', 0),
+('Losartan', 'Angilock 100mg', '100 mg', 'm018', 0),
+('Amphicilin', 'Acmecilin 250mg', '250 mg', 'm019', 0),
+('Vancomycin', 'Vancard 500mg', '500 mg', 'm020', 0),
+('Vancomycin', 'Vancard 1000mg', '1000 mg', 'm021', 0),
+('Calcium supplement', 'Calbo-D 500mg', '500 mg', 'm022', 0),
+('Levofloxacin', 'Levoxin 250mg', '250 mg', 'm023', 0),
+('Levofloxacin', 'Levoxin 500mg', '500 mg', 'm024', 0),
+('Levofloxacin', 'Levoxin 750mg', '750 mg', 'm025', 0),
+('Levothyroxin', 'Eltroxin 50mcg', '50 mcg', 'm026', 0);
+
+insert into Prescribes values
+('m003', 'd003'),
+('m006', 'd003'),
+('m007', 'd004'),
+('m008', 'd004'),
+('m012', 'd001'),
+('m011', 'd001'),
+('m014', 'd002'),
+('m015', 'd002'),
+('m018', 'd002'),
+('m019', 'd002'),
+('m021', 'd002'),
+('m022', 'd005'),
+('m009', 'd005'),
+('m002', 'd005'),
+('m025', 'd005'),
+('m026', 'd005'),
+('m007', 'd005');
+
+insert into pharmacy values
+('m001'),
+('m002'),
+('m003'),
+('m004'),
+('m005'),
+('m006'),
+('m007'),
+('m008'),
+('m009'),
+('m010'),
+('m011'),
+('m012'),
+('m013'),
+('m014'),
+('m015'),
+('m016'),
+('m017'),
+('m018'),
+('m019'),
+('m020'),
+('m021'),
+('m022'),
+('m023'),
+('m024'),
+('m025'),
+('m026');
+
+insert into test values
+('t001', 'Blood cultures'),
+('t002', 'CT Scan'),
+('t003', 'MRI'),
+('t004', 'Lumbar Puncture'),
+('t005', 'Pregnancy test'),
+('t006', 'Pelvic ultrasound'),
+('t007', 'Laporoscopy'),
+('t008', 'CA 125 blood test'),
+('t009', 'ECG'),
+('t010', 'Blood Tests'),
+('t011', 'Echocardiogram'),
+('t012', 'X-ray'),
+('t013', 'Sputum test');
+
+insert into orders values
+('t001', 'd003'),
+('t002', 'd003'), 
+('t003', 'd002'),
+('t003', 'd005'),
+('t004', 'd003'),
+('t005', 'd001'),
+('t006', 'd001'),
+('t007', 'd001'),
+('t008', 'd001'),
+('t009', 'd001'),
+('t010', 'd002'),
+('t010', 'd005'),
+('t011', 'd002'),
+('t012', 'd002'),
+('t012', 'd005'),
+('t013', 'd005');
+
+insert into diagnosis1 values
+('p001','Myocardial Infarction'),
+('p002','Cardiac Amyloidosis'),
+('p003','Infective endocarditis'),
+('p004','Osteoarthritis'),
+('p005','Pneuomonia'),
+('p006','Ovarian Cysts'),
+('p007','Mumps'),
+('p008','Hypothyroidism'),
+('p009','Influenza'),
+('p010','Meningitis');
+
+
+
+
+

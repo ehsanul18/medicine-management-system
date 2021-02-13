@@ -1,0 +1,101 @@
+CREATE TABLE Doctor (
+	DName char(100) NOT NULL,
+	Dept char(100) NOT NULL,
+	Age int(2) NOT NULL,
+	Dusername varchar(100) NOT NULL,
+	Doctor_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Doctor_ID)
+);
+
+CREATE TABLE Doctor_1 (
+        Doctor_ID varchar(4) NOT NULL,
+	Dusername varchar(100) NOT NULL,
+	Password varchar(8) NOT NULL,
+	PRIMARY KEY (Dusername),
+        FOREIGN KEY(Doctor_ID) references Doctor(Doctor_ID)
+);
+
+CREATE TABLE Patient (
+	PName char(100) NOT NULL,
+	Date_of_Birth date NOT NULL,
+        Gender char(6) NOT NULL,
+	Patient_ID varchar(4) NOT NULL,
+	House varchar(100) NOT NULL,
+	Road varchar(4) NOT NULL,
+	Area char(25) NOT NULL,
+	City char(25) NOT NULL,
+	PRIMARY KEY (Patient_ID)
+);
+
+CREATE TABLE Symptoms_1 (
+	Symptoms char(200) NOT NULL,
+	Patient_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Patient_ID),
+        FOREIGN KEY (Patient_ID) references Patient(Patient_ID)
+);
+ 
+CREATE TABLE Patient_History (
+	Past_diseases varchar(100) NOT NULL,
+	Pressure varchar(10) NOT NULL,
+	Heartbeat varchar(100) NOT NULL,
+	Temperature_in_celsius dec(3,1) NOT NULL,
+	Weight_in_kg dec(3,1) NOT NULL,
+	Height_in_feet dec(3,2) NOT NULL,
+	Family_History varchar(100) NOT NULL,
+	Patient_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Patient_ID),
+        FOREIGN KEY (Patient_ID) references Patient(Patient_ID)
+);
+
+CREATE TABLE Medicine (
+	Generic_Name varchar(100) NOT NULL,
+	Trademark_Name varchar(100) NOT NULL,
+	Variation varchar(100) NOT NULL,
+	Medicine_ID varchar(4) NOT NULL,
+	Quantity int(4) NOT NULL,
+	PRIMARY KEY (Medicine_ID)
+);
+
+CREATE TABLE Prescribes (
+	Medicine_ID varchar(4) NOT NULL,
+	Doctor_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Medicine_ID,Doctor_ID),
+        FOREIGN KEY (Medicine_ID) references Medicine(Medicine_ID),
+        FOREIGN KEY (Doctor_ID) references Doctor (Doctor_ID)
+);
+
+CREATE TABLE Consults (
+	Patient_ID varchar(4) NOT NULL,
+	Doctor_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Patient_ID,Doctor_ID),
+        FOREIGN KEY (Patient_ID) references Patient(Patient_ID),
+        FOREIGN KEY (Doctor_ID) references Doctor (Doctor_ID)
+);
+
+CREATE TABLE Pharmacy (
+	Medicine_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Medicine_ID),
+        FOREIGN KEY (Medicine_ID) references Medicine(Medicine_ID)
+);
+
+CREATE TABLE Test (
+	Test_ID varchar(4) NOT NULL,
+	TName varchar(100) NOT NULL,
+	PRIMARY KEY (Test_ID)
+);
+
+CREATE TABLE Orders (
+	Test_ID varchar(4) NOT NULL,
+	Doctor_ID varchar(4) NOT NULL,
+	PRIMARY KEY (Test_ID,Doctor_ID),
+        FOREIGN KEY (Test_ID) references Test(Test_ID),
+        FOREIGN KEY (Doctor_ID) references Doctor(Doctor_ID)
+);
+
+CREATE TABLE Diagnosis1 (
+        Patient_ID varchar(4) NOT NULL,
+        Diagnosis varchar(100) NOT NULL,
+        PRIMARY KEY (Patient_ID),
+        FOREIGN KEY (Patient_ID) references Patient(Patient_ID)
+);
+

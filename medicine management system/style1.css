@@ -1,0 +1,66 @@
+*{
+	margin:0;
+	padding:0;
+	
+}
+
+.bannernav{
+	border: 3px solid lightblue;
+
+}
+
+body{
+	background-color: #F4F4F4;
+	
+}
+
+nav{
+	
+	width: 100%;
+	height: 40px;
+	background-color:lightblue;
+	
+}
+
+h1{
+	font-family: Georigia;
+	color: white;
+	font-size:40px;
+	margin: 20 px;
+	text-align: center;	
+	text-shadow: 3px 2px #D9D7DB;
+}
+
+h2
+{
+	font-family: calibri;
+	font-size:28px;
+	text-shadow: 3px 2px #D9D7DB;
+	
+}
+h3{
+	font-family: calibri;
+	font-size: 22px;
+	text-shadow: 3px 2px #D9D7DB;
+	text-align: left;	
+}
+
+h4
+{
+	font-family: calibri;
+	font-size: 20px;
+	line-height:2; 
+	text-shadow: 3px 2px #D9D7DB;
+	text-align: left;	
+}
+
+.button{
+  background-color: #1b909b;
+  border: none;
+  color: white;
+  padding: 4px 10px;
+  text-decoration: none;
+  font-size: 15px;
+  text-decoration: none;
+  display: block;
+}
